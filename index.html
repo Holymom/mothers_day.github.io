@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who are you today? | Mother's Day Special</title>
+    <meta name="description"
+        content="A personalized Mother's Day experience. Tell us who you are and see a special message tailored for you.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Decorative Elements -->
+    <svg class="ornament" id="ornament-1" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#F7CAC9"
+            d="M44.7,-76.4C58.1,-69.2,69.2,-58.1,77.3,-44.7C85.4,-31.3,90.5,-15.7,89.5,-0.6C88.5,14.5,81.4,29,72.1,42.4C62.8,55.8,51.3,68.1,37.1,76.5C22.9,84.9,6,89.4,-9.9,87.6C-25.8,85.8,-40.7,77.7,-53.6,68.3C-66.5,58.9,-77.4,48.2,-84.1,35.2C-90.8,22.2,-93.3,6.9,-89.9,-7C-86.5,-20.9,-77.2,-33.4,-66.4,-44.6C-55.6,-55.8,-43.3,-65.7,-29.9,-72.9C-16.5,-80.1,0,-84.6,14.9,-84.7C29.8,-84.8,31.3,-83.6,44.7,-76.4Z"
+            transform="translate(100 100)" />
+    </svg>
+    <svg class="ornament" id="ornament-2" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#92A8D1"
+            d="M40.3,-68.1C51.6,-61.4,60.1,-49,67.1,-35.8C74.1,-22.6,79.6,-8.6,79.1,5.2C78.6,19.1,72,32.7,62.8,44.9C53.6,57.1,41.8,67.8,28.7,73.4C15.6,79,-0.8,79.5,-16.4,75.9C-32,72.3,-46.8,64.6,-57.8,53.2C-68.8,41.8,-76,26.7,-78.5,10.6C-81,-5.5,-78.8,-22.6,-71,-36.8C-63.2,-51,-49.8,-62.3,-35.6,-67.7C-21.4,-73.1,-6.4,-72.6,8.2,-71.4C22.8,-70.2,29,-56,40.3,-68.1Z"
+            transform="translate(100 100)" />
+    </svg>
+
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="container">
+        <header>
+            <h1>Who are you today?</h1>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <input type="text" id="who-input" placeholder="Type here" autocomplete="off">
+            </div>
+
+            <div id="result-section">
+                <div class="message-box" id="msg-box">
+                    <div class="ribbon-lock" id="ribbon-lock">
+                        <p><i class="fa-solid fa-gift"></i> Drag the ribbon to unlock your message</p>
+                        <input type="range" min="0" max="100" value="0" id="ribbon-slider">
+                    </div>
+                    <div class="unlocked-content" id="unlocked-content"
+                        style="opacity: 0; pointer-events: none; transition: opacity 1.5s ease;">
+                        <h2 id="greeting">Hello!</h2>
+                        <p id="personalized-message">Welcome to your special day.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
